@@ -12,13 +12,16 @@ import { Pagination } from 'swiper/modules';
 
 import '../index.css';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 
 const Home = () => {
   console.log(List);
   return (
-    <div className='bg-white h-screen'>
-      <div className='flex justify-around py-10 bg-sky-200 max-md:flex-col justify-center'>
+    <div>
+      <Navbar></Navbar>
+     <div className='bg-white h-screen'>
+      <div className='flex justify-around py-10 bg-sky-200 max-md:flex-col justify-center' id='forbanner'>
         <h1 className='text-3xl font-bold py-40 text-black max-md:text-center p-4'>
          Welcome to<span className='text-amber-400'>E-museum website</span><br></br>
         Explore world Best museum with Us.
@@ -28,7 +31,7 @@ const Home = () => {
           </img>
         </div>
       </div>
-         <h2 className='text-3xl font-semibold bg-sky-200 text-center text-amber-500 '>Best Museum In the World</h2>
+         <h2 className='text-3xl font-semibold bg-sky-200 text-center'>Best Museum In the World</h2>
       <div className='flex justify-center py-10 px-8 bg-sky-200'>
       <Swiper
         slidesPerView={4}
@@ -67,7 +70,7 @@ const Home = () => {
 
          </div>
          <div className='flex justify-center items-center'>
-         <button className="btn btn-warning px-8">Locate</button>
+         <button className="bg-orange px-8">Locate</button>
            
          </div>
      
@@ -78,6 +81,8 @@ const Home = () => {
      </div>
      <Footer/>
     </div>
+    </div>
+    
   )
 }
 

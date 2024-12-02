@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#forbanner{
+  background: linear-gradient(to left, #e7c898, #817e78);
+}
+#login{
+  background: linear-gradient(to left, #dfe68976, #60d0e3);
+
+}
+
 .swiper {
     width: 100%;
     height: 100%;
