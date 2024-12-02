@@ -9,6 +9,14 @@
   background: linear-gradient(to left, #dfe68976, #60d0e3);
 
 }
+#banner1{
+  filter: blur(10%);
+  height: 550px;
+}
+#map{
+  filter: blur(10px);
+  filter: brightness(0.8) contrast(0.8);
+}
 
 .swiper {
     width: 100%;
