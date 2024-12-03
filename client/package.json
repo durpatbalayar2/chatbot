@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start":"5005",
+    "start": "5005",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -16,6 +16,7 @@
     "@mui/icons-material": "^6.1.9",
     "@mui/material": "^6.1.9",
     "@mui/styled-engine-sc": "^6.1.9",
+    "axios": "^1.7.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.1",

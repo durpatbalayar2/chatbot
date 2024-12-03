@@ -1,35 +1,58 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import axios from 'axios' 
 
 const Signup = () => {
+  function handleinput(e)
+  {
+    e.preventDefault();
+    const form=e.target;
+    const Name=form.name.value;
+    const Email=form.email.value
+    const Password=form.password.value
+    console.log(Name,Email,Password);
+    let mydata={Name,Email,Password};
+    console.log(mydata);
+    axios
+      .post('http://localhost:8080/signup', mydata)
+      .then((response) => {
+        console.log('Data inserted successfully:', response.data);
+      })
+      .catch((error) => {
+        console.error('There was an error inserting the data:', error);
+      });
+ 
+  }
+    
+  
   return ( 
     <>
     <Navbar/>
     <div className='flex justify-center' id='login'>
        <div className=' my-10 max-sm:w-[100%]'>
          <div className='text-2xl font-semibold text-center'>Create an Account</div>
-         <form action="" className=' mx-10'>
+         <form onSubmit={handleinput} className=' mx-10' name='form'>
           <div className=''>
           <div className="my-4 flex-col">
-          <label for="username" className="text-black font-semibold">Enter Your Name:</label><br></br>     
-          <input className='w-[400px] border-2 border-solid border-slate-800 bg-transparent  outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]'placeholder='Enter your Name' type="text" id="username" name="Email" required />     
+          <label  className="text-black font-semibold">Enter Your Name:</label><br></br>     
+          <input className='w-[400px] border-2 border-solid border-slate-800 bg-transparent  outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]'placeholder='Enter your Name' type="text" name="name" required />     
             </div> 
             <div className="my-4 flex-col items-center justify-center space-y-2">
-            <label for="username" className="text-black font-semibold">Enter your Email:</label><br></br>
-            <input className='w-[400px] border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]'placeholder='Enter your Email' type="text" id="username" name="Email" required />
+            <label  className="text-black font-semibold">Enter your Email:</label><br></br>
+            <input className='w-[400px] border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]'placeholder='Enter your Email' type="text"  name="email" required />
             </div>
             <div className="my-4 flex-col space-y-2">
-            <label for="username" className="text-black font-semibold">Enter your Contact:</label><br></br>
-            <input className='w-[400px]  border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your contact No' type="text" id="username" name="phone" required />
+            <label className="text-black font-semibold">Enter your Contact:</label><br></br>
+            <input className='w-[400px]  border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your contact No' type="text" name="phone" required />
             </div>
             <div className="my-4 flex-col space-y-2">
-            <label for="username" className="text-black font-semibold">Enter a Password:</label><br></br>
-            <input className='w-[400px]   border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your password' type="password" id="username" name="password" required />
+            <label className="text-black font-semibold">Enter a Password:</label><br></br>
+            <input className='w-[400px]   border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your password' type="password"  name="password" required />
             </div>
             <div className='text-center'>
-            <button className=' border-2 border-solid rounded-md btn btn-primary text-white font-bold'>Create Account</button>
+            <button value='submit'type='submit' className=' border-2 border-solid rounded-md btn btn-primary text-white font-bold'>Create Account</button>
             </div>
            
 
