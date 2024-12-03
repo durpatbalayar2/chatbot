@@ -26,6 +26,15 @@ const Signup = () => {
       });
  
   }
+  function googleauth()
+  {
+    alert("working");
+    axios
+    .post('http://localhost:8080/register/oauth2/code/google')
+    .then((response) => {
+      console.log('Data inserted successfully:', response.data);
+    })
+  }
     
   
   return ( 
@@ -46,11 +55,11 @@ const Signup = () => {
             </div>
             <div className="my-4 flex-col space-y-2">
             <label className="text-black font-semibold">Enter your Contact:</label><br></br>
-            <input className='w-[400px]  border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your contact No' type="text" name="phone" required />
+            <input className='w-[400px]   border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your contact No' type="text" name="phone" required />
             </div>
             <div className="my-4 flex-col space-y-2">
             <label className="text-black font-semibold">Enter a Password:</label><br></br>
-            <input className='w-[400px]   border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your password' type="password"  name="password" required />
+            <input className='w-[400px] text-white  border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your password' type="password"  name="password" required />
             </div>
             <div className='text-center'>
             <button value='submit'type='submit' className=' border-2 border-solid rounded-md btn btn-primary text-white font-bold'>Create Account</button>
@@ -61,7 +70,8 @@ const Signup = () => {
            
          </form>
          <div className='w-[100%] text-center'><h2>Already have an Account?<Link to='/login'><span className='text-green-900 font-bold'> Login Here</span></Link></h2></div>
-         <div className='w-[100%] text-center mb-10'><h2>OR<br></br><Link to='/login'><span className='text-black font-bold'>Continue With Google</span></Link></h2></div>
+         <div className='w-[100%] text-center mb-10'><h2>OR<br></br><span className='text-black font-bold' onClick={googleauth}>
+          Continue With Google</span></h2></div>
         
        </div>
        <div className='fixed bottom-0 left-0 right-0 w-[100%]'>

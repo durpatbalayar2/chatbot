@@ -57,9 +57,9 @@ const Home = () => {
          Lets explore Together the adventure of the world Wide Museum
          <p className='text-xl font-semibold text-black'>Discover the cultural heritage and museums of India!</p>
          </h2>
-         <div className='flex justify-center py-10'>
+         <div className='flex justify-center pt-10'>
             <label className='px-10 py-1'>choose your Current Location to Locate an Museum near you</label>
-            <select className='bg-white rounded-md text-black py-2 border-2 border-solid border-slate-400'>
+            <select className='bg-white rounded-md text-black  border-2 border-solid border-slate-400'>
               <option value="delhi">Delhi</option>
               <option value="mumbai">Mumbai</option>
               <option value="chennai">Chennai</option>
@@ -70,7 +70,7 @@ const Home = () => {
 
          </div>
          <div className='flex justify-center items-center'>
-         <button className="bg-orange px-8">Locate</button>
+         <button className="btn btn-warning px-8">Locate</button>
            
          </div>
      

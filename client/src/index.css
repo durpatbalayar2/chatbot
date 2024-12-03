@@ -71,3 +71,7 @@ filter: brightness(0.2);
 
 
 }
+#star img{
+  width: 20px;
+  height: 30px;
+}

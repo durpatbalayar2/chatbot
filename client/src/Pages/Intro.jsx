@@ -26,8 +26,8 @@ const Intro = () => {
        </div>
       <div className='flex gap-10 px-6 pt-4 text-2xl font-semibold mr-10 max-sm:hidden'>
         <Link to='/'>Home</Link>
-        <Link to="/home">About</Link>
-        <button className='btn btn-primary text-white font-bold'> <Link to="/register">Register</Link></button>
+        <Link to="/home">Learn More</Link>
+        <button className='btn btn-warning text-white font-bold'> <Link to="/register">Register</Link></button>
         <button className='btn btn-secondary text-white font-bold'> <Link to="/login">Login</Link></button>
       </div>
      </div>
