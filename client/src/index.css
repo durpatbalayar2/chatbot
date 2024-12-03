@@ -14,8 +14,11 @@
   height: 550px;
 }
 #map{
-  filter: blur(10px);
-  filter: brightness(0.8) contrast(0.8);
+  
+  filter: brightness(0.2) contrast(0.8);
+}
+#mapimg{
+  filter: brightness(0.2) contrast(0.9);
 }
 
 .swiper {
@@ -38,9 +41,33 @@
     height: 350px;
     object-fit: cover;
   }
-  
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
+/*introo*/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+/* about banner*/
+#aboutbnr{
+opacity: 70%;
+filter: brightness(0.2);
+
+
+}

@@ -28,10 +28,6 @@ const Signup = () => {
             <label for="username" className="text-black font-semibold">Enter a Password:</label><br></br>
             <input className='w-[400px]   border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your password' type="password" id="username" name="password" required />
             </div>
-            <div className="my-4 flex-col space-y-2">
-            <label for="username" className="text-black font-semibold">Confirm your Password:</label><br></br>
-            <input className='w-[400px]  border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]'placeholder='Confirm your password' type="password" id="username" name="password" required />
-            </div>
             <div className='text-center'>
             <button className=' border-2 border-solid rounded-md btn btn-primary text-white font-bold'>Create Account</button>
             </div>
