@@ -16,7 +16,7 @@ const Signup = () => {
     let mydata={Name,Email,Password};
     console.log(mydata);
     axios
-      .post('http://localhost:8080/signup', mydata)
+      .post('http://localhost:8080/register', mydata)
       .then((response) => {
         console.log('Data inserted successfully:', response.data);
       })
