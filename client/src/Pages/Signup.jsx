@@ -9,12 +9,12 @@ const Signup = () => {
   {
     e.preventDefault();
     const form=e.target;
-    const Name=form.name.value;
-    const Email=form.email.value
-    const Password=form.password.value
-    const Phone=form.phone.value
-    console.log(Name,Email,Password);
-    let mydata={Name,Email,Password,Phone};
+    const username=form.name.value;
+    const email=form.email.value
+    const password=form.password.value
+    const contact=form.phone.value
+    console.log(username,email,password,contact);
+    let mydata={username,email,password,contact};
     console.log(mydata);
     axios
       .post('http://localhost:8080/register', mydata)
@@ -62,7 +62,7 @@ const Signup = () => {
             <input className='w-[400px] text-white  border-2 border-solid border-slate-800 bg-transparent outline-none rounded-md py-2 placeholder:p-2 max-sm:w-[100%]' placeholder='Enter your password' type="password"  name="password" required />
             </div>
             <div className='text-center'>
-            <button value='submit'type='submit' className=' border-2 border-solid rounded-md btn btn-primary text-white font-bold'>Create Account</button>
+            <button value='submit'type='submit' className=' border-2 border-solid rounded-md btn btn-primary text-white font-bold'><Link to='/profile'>Create Account</Link></button>
             </div>
            
 
@@ -70,8 +70,8 @@ const Signup = () => {
            
          </form>
          <div className='w-[100%] text-center'><h2>Already have an Account?<Link to='/login'><span className='text-green-900 font-bold'> Login Here</span></Link></h2></div>
-         <div className='w-[100%] text-center mb-10'><h2>OR<br></br><span className='text-black font-bold' onClick={googleauth}>
-          Continue With Google</span></h2></div>
+         <div className='w-[100%] text-center mb-10'><h2>OR<br></br><button className='text-black font-bold' onClick={googleauth}>
+          Continue With Google</button></h2></div>
         
        </div>
        <div className='fixed bottom-0 left-0 right-0 w-[100%]'>

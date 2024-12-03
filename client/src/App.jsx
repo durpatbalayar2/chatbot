@@ -8,6 +8,7 @@ import Signup from './Pages/Signup'
 import Navbar from './components/Navbar'
 import Gallary from './pages/Gallary'
 import Intro from './Pages/Intro'
+import Profile from './Pages/Profile'
 function App() {
 
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
         <Route path="/gallary" element={<Gallary/>} />
-         <Route path="*" element={<h2>Page is not Found</h2>} />
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path="*" element={<h2>Page is not Found</h2>} />
       </Routes>
     </>
   )

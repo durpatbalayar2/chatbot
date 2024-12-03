@@ -30,7 +30,8 @@ const About = () => {
           </h2>
       </div>
       {/*  Second banner of the websites */}
-      <div>
+      <div className='bg
+      '>
         <h2 className='text-4xl font-bold text-center'>About of Our Websites</h2>
       </div>
       <div>
