@@ -16,7 +16,7 @@ const About = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quam facilis nesciunt, nemo repellendus quo error quisquam quos pariatur unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum maxime quidem, commodi libero suscipit nesciunt sit accusantium consequuntur nulla dolores, provident eos cupiditate numquam nisi adipisci incidunt, dolore iste unde?
           </span>
          <button className='btn btn-warning px-8 text-xl mt-2 font-semibold'>
-            <Link to='/signup'>Join Us</Link></button>
+            <Link to='/register'>Join Us</Link></button>
           </h2>
       </div>
     </div>

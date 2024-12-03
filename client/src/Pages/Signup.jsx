@@ -12,8 +12,9 @@ const Signup = () => {
     const Name=form.name.value;
     const Email=form.email.value
     const Password=form.password.value
+    const Phone=form.phone.value
     console.log(Name,Email,Password);
-    let mydata={Name,Email,Password};
+    let mydata={Name,Email,Password,Phone};
     console.log(mydata);
     axios
       .post('http://localhost:8080/register', mydata)
