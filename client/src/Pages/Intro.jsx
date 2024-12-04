@@ -3,7 +3,7 @@ import "animate.css";
 import { Link, Links } from "react-router-dom";
 
 import banner1 from "../assets/map.png";
-import map from "../assets/maplog.png";
+import map from "../assets/indiamap.gif";
 import List from "../img.json";
 import { useRef, useState } from "react";
 // Import Swiper React components

@@ -7,30 +7,26 @@ import axios from 'axios';
 const Login = () => {
   const navigate=useNavigate();
 
-  function handledata(e)
+ async function handledata(e)
   {
     e.preventDefault();
     const form=e.target;
     const username=form.username.value;
     const password=form.pswrd.value
     const data={username,password};
-    if(username==='user' && password==='123'){
-      navigate('/profile');
-    }
-
-    else{
-       alert("Invalid username or password");
-    }
-    console.log(data)
-    axios
-      .post('http://localhost:8080/login', data)
-      .then((response) => {
-        console.log('Data inserted successfully:', response.data);
-      })
-      .catch((error) => {
-        console.error('There was an error inserting the data:', error);
-      });
-
+    console.log(data);
+    const response=await axios.post('http://localhost:8080/login', data)
+    .then((response) => {
+           if(response.status === 200){
+               console.log("SUCCESSS")
+               navigate('/profile');
+               return response.json();     
+           }else{
+               console.log("SOMETHING WENT WRONG")
+           }})
+     .catch((error) => {
+       console.error('There was an error inserting the data:', error);
+     });
   }
   return (
     <>
