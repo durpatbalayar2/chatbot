@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
+
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
@@ -75,6 +76,7 @@ const Chatbot = () => {
       {/* Chatbot Container */}
       {isOpen && (
         <div
+          id="botdemo3"
           style={{
             position: "fixed",
             bottom: "70px",
@@ -88,8 +90,12 @@ const Chatbot = () => {
             borderRadius: "8px",
             zIndex: 1000,
           }}
+          onMouseLeave={(e) => {
+            e.target.style.display = "none"; // Reset scale on hover leave
+          }}
         >
           <div
+            id="botdemo"
             style={{
               height: "300px",
               overflowY: "scroll",
@@ -112,6 +118,7 @@ const Chatbot = () => {
             <div ref={messagesEndRef} />
           </div>
           <div
+            id="botdemo2"
             style={{ marginTop: "10px", display: "flex", alignItems: "center" }}
           >
             <input

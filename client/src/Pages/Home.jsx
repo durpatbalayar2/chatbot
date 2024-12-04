@@ -22,7 +22,7 @@ const Home = () => {
       <Navbar></Navbar>
       <div className="bg-white h-screen">
         <div
-          className="flex justify-around py-10 bg-sky-200 max-md:flex-col justify-center"
+          className="flex justify-around py-10 bg-sky-200 max-md:flex-col "
           id="forbanner"
         >
           <h1 className="text-3xl font-bold py-40 text-black max-md:text-center p-4">

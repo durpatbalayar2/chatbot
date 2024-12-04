@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className='flex gap-10 px-6 py-4 text-2xl font-semibold mr-10 max-sm:hidden'>
         <Link to='/home'>Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/chatbot">Chatbot</Link>
+        <Link to="/home">Chatbot</Link>
         <Link to="/Gallary">Gallary</Link>
         <button className='btn btn-warning text-white font-bold'> <Link to="/register">Register</Link></button>
         <button className='btn btn-secondary text-white font-bold'> <Link to="/login">Login</Link></button>

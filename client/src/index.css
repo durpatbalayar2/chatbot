@@ -75,3 +75,7 @@ filter: brightness(0.2);
   width: 20px;
   height: 30px;
 }
+#profilebg{
+  filter: blur(3px);
+
+}
