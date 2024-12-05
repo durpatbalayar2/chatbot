@@ -109,13 +109,17 @@ const Home = () => {
 
         {/* Footer Section */}
         <div>
-          lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.
+          An Indian museum serves as a window into the nation's vibrant and
+          multifaceted history, culture, and traditions. Whether it's the
+          magnificent sculptures of ancient temples, the intricate designs of
+          Mughal paintings, or the relics from the Indus Valley Civilization,
+          these institutions curate artifacts that narrate timeless stories. For
+          instance, the National Museum in New Delhi houses collections ranging
+          from prehistoric tools to modern art. The Indian Museum in Kolkata,
+          one of the oldest in the country, features diverse exhibits such as
+          fossils, mummies, and Mughal-era ornaments. Museums in India are not
+          just repositories of the past but also hubs of learning and
+          inspiration for curious minds.
         </div>
         <Chatbot />
         <Footer />
